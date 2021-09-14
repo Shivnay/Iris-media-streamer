@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+    cursor: none !important;
+}
+html{
+    background: black;
+}
+/*Modal Styles*/
+#modal {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 100;
+    background: transparent;
+    display: flex;
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+}
+#modal #container {
+    padding: .5%;
+    border-radius: 3px;
+}
+#modal #controls {
+}
+#modal #controls button{
+    margin-left: 2.5%;
+    font-size: 14pt;
+    color: white;
+    background: transparent;
+    transition: 0.2s ease-out;
+    border: 3px solid white;
+    padding: 10px;
+    border-radius: 3px;
+}
+.modal-control-focused {
+    background: white;
+    color: black;
+}
+
+.modal-large{
+    width: 90%;
+}
+.modal-medium{
+    width: 50%;
+}
+.modal-small{
+    width: 20%;
+}
+
+/*Modal Positions*/
+.modal-top-left{
+    position: absolute;
+    top: 1%;
+    left: 5%;
+}
+.modal-top-middle{
+    margin: auto;
+}
+.modal-top-right{
+    position: absolute;
+    top: 1%;
+    left: 75%;
+}
+.modal-middle-left{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+}
+.modal-middle-middle{
+    margin: auto;
+}
+.modal-middle-right{
+    position: absolute;
+    top: 45%;
+    left: 75%;
+}
+.modal-bottom-left{
+    position: absolute;
+    top: 80%;
+    left: 5%;
+}
+.modal-bottom-middle{
+    position: absolute;
+    top: 80%;
+    left: 40%;
+}
+.modal-bottom-right{
+    position: absolute;
+    top: 80%;
+    left: 75%;
+}

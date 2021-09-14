@@ -1,0 +1,39 @@
+{
+  "app_id":"zd-01",
+  "version":"1.0.5",
+  "name": "Iris",
+  "display": "standalone",
+  "description": "A personalized and centeralized entertainment system",
+  "icons": [{
+    "src": "assets/img/logo.png",
+    "sizes": "56x60",
+    "type": "image/png"
+  }], 
+  "splash-screen":[{
+    "default":[{"img":"assets/img/splash.png"}],
+    "chrismas":[{"img":"assets/img/splash.png"}]
+  }],
+  "Activity": {
+    "profile-login": {
+      "theme":"#616161"
+    },
+    "search": {
+      "theme":"#616161"
+    },
+    "home": {
+      "theme":"#6850d0"
+    },
+    "movies": {
+      "theme":"#505DD0"
+    },
+    "series": {
+      "theme":"#C93939"
+    },
+    "library": {
+      "theme":"#616161"
+    },
+    "settings": {
+      "theme":"#616161"
+    }
+  }
+}

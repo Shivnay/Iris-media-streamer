@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="assets/img/logo.png">
+    <link rel="stylesheet" href="assets/font_awesome/css/all.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Anton|Titillium+Web&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/media-player.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <title>Iris &middot; Home</title>
+</head>
+<body>
+    <div id="debug-output"></div>
+    <div id="media-player" class="media-player-hide">
+        <div id="media-prompt" class="loading"><p>Loading....</p></div>
+        <video></video>
+        <div id="controls" class="controls-hide">
+            <div id="playback">
+                <div id="seek">
+                    <div id="media-details">
+                        <div id="title"></div>
+                    </div>
+                    <div id="bar">
+                        <div id="completionBar"></div>
+                    </div>
+                    <div id="runtime">
+                        <p id="currentRuntime"></p>
+                        <p id="totalRuntime"></p>
+                    </div>
+                </div>
+                <div id="navigation">
+                    <button id="back" class="playback-unfocused"><i class="fas fa-arrow-left"></i> Back</button>
+                    <button id="previous" class="playback-unfocused"><i class="fas fa-step-backward"></i></button>
+                    <button id="fast-backward" class="playback-unfocused"><i class="fas fa-fast-backward"></i></button>
+                    <button id="pause" class="playback-unfocused"><i class="fas fa-pause"></i></button>
+                    <button id="fast-forward" class="playback-unfocused"><i class="fas fa-fast-forward"></i></button>
+                    <button id="next" class="playback-unfocused"><i class="fas fa-step-forward"></i></button>
+                </div>
+            </div>
+            <div id="playlist">
+                <ul class="media-list"></ul>
+            </div>
+        </div>
+    </div>
+    <div id="splash-screen">
+        <img src="assets/img/splash.png" alt="splash screen">
+    </div>
+    <div id="profile-login">
+        <div id="logo">
+            <img src="/assets/img/logo.png" alt="logo">
+        </div>
+        <h1>Which Homie/White is watching ?</h1>
+        <ul id="user-profiles"></ul>
+    </div>
+    <div id="notification" class="notification-hide">
+        <div id="icon"><span><i class="fas fa-tv"></i></span></div>
+        <div id="message">
+            <span class="notification-title"></span><br>
+            <span class="notification-sub-title"></span><br>
+            <span class="notification-body"></span><br>
+            
+        </div>
+    </div>
+    <nav id="menu">
+        <div class="app-icon">
+            <img src="assets/img/logo.png" alt="logo">
+        </div>
+        <ul id="menu-list">
+            <li class="nav-item" id="btnsearch">
+                <a class="nav-link"  href="#"><span><i class="fas fa-search"></i></span></a>
+            </li>
+            <li class="nav-item" id="btnhome">
+                <a class="nav-link"  href="#"><span><i class="fas fa-home"></i></span></a>
+            </li>
+            <li class="nav-item" id="btnmovies">
+                <a class="nav-link"  href="#"><span><i class="fas fa-film"></i></span></a>
+            </li>
+            <li class="nav-item" id="btnseries">
+                <a class="nav-link"  href="#"><span><i class="fas fa-tv"></i></span></a>
+            </li>
+            <li class="nav-item" id="btnlibrary">
+                <a class="nav-link"  href="#"><span><i class="fas fa-folder"></i></span></a>
+            </li>
+            <li class="nav-item" id="btnsettings">
+                <a class="nav-link"  href="#"><span><i class="fas fa-cog"></i></span></a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section id="search">
+            <!-- <div class="filter">
+                <div class="prahse">
+                    <form action="#" id="filter-search">
+                        <input type="text" name="search-term" value="" placeholder="Eg. Avengers">
+                        <div class="type">
+                            <button id="filter-movie"><span><i class="fas fa-film"></i></span> Movies</button>
+                            <button id="filter-tv-show"><span><i class="fas fa-tv"></i></span> TV Shows</button>
+                        </div>
+                        <button id="submit"><span><i class="fas fa-search"></i></span> Search</button>
+                    </form>
+                </div>
+                <div class="tags">
+                    <ul>
+                        <li class="custom-select">
+                            <select id="genre">
+                                <option value="Action">Action</option>
+                                <option value="Action">Action</option>
+                                <option value="Adventure">Adventure</option>
+                                <option value="Animated">Animated</option>
+                                <option value="Comedy">Comedy</option>
+                                <option value="Documentry">Documentry</option>
+                                <option value="Drama">Drama</option>
+                                <option value="Family">Family</option>
+                                <option value="Fantasy">Fantasy</option>
+                                <option value="Horror">Horror</option>
+                                <option value="Music">Music</option>
+                                <option value="Musical">Musical</option>
+                                <option value="Romance">Romance</option>
+                                <option value="Sci-Fi">Sci-Fi</option>
+                            </select>
+                        </li>
+                        <li class="custom-select">
+                            <select id="quality">
+                                <option value="720p">720P</option>
+                                <option value="720p">720P</option>
+                                <option value="1080p">1080P</option>
+                                <option value="4K">4K</option>
+                            </select>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <input type="text" id="year" placeholder="Eg. 2017">
+                        </li>
+                        <li>
+                            <input type="text" id="rating" placeholder="Eg. 5.0">
+                        </li>
+                    </ul>
+                    <ul id="tag-list"></ul>
+                </div>
+            </div>
+            <div class="results">
+                <ul class="media-list">
+                </ul>
+            </div> -->
+        </section>
+        <section id="home">
+            <div class="details">
+                <div class="info">
+                    <div class="title"></div>
+                    <ul>
+                        <li class="wk-rating"></li>
+                        <li><span class="imdb_rating"></span> <i class="fas fa-star"></i></li>
+                        <li><span class="audience"></span></li>
+                        <li><i class="fas fa-clock"></i> <span class="hours"></span></li>
+                        <li><i class="fas fa-calendar"></i> <span class="release-date"></span></li>
+                    </ul>
+                    <ul id="tags"></ul>
+                    <div class="discription"></div> 
+                    <div class="awards"><i class="fas fa-award"></i> <span></span></div>
+                    <div id="secondary-controls">
+                        <div class="mediaPlay">
+                            <button class="secondary-option" id="play-media"><span><i class="fas fa-play"></i></span> Play</button>
+                            <p class="media-completion"></p>
+                        </div>
+                        <button class="secondary-option" id="toggle-playlist"><span><i class="fas fa-folder-plus"></i></span></button>
+                    </div>
+                </div>
+                <div id="preview">
+                    <video></video>
+                </div>
+            </div>
+            <div class="media-navigation">
+                <div class="latest-movies">
+                    <ul class="media-list"></ul>
+                </div>
+            </div>
+        </section>
+        <section id="movies">
+            <div class="details">
+                <div class="info">
+                    <div class="title"></div>
+                    <ul>
+                        <li class="wk-rating"></li>
+                        <li><span class="imdb_rating"></span> <i class="fas fa-star"></i></li>
+                        <li><span class="audience"></span></li>
+                        <li><i class="fas fa-clock"></i> <span class="hours"></span></li>
+                        <li><i class="fas fa-calendar"></i> <span class="release-date"></span></li>
+                    </ul>
+                    <ul id="tags"></ul>
+                    <div class="discription"></div> 
+                    <div class="awards toggle-info"><i class="fas fa-award"></i> <span></span></div>
+                    <div id="secondary-controls">
+                        <div class="mediaPlay">
+                            <button class="secondary-option" id="play-media"><span><i class="fas fa-play"></i></span> Play</button>
+                            <p class="media-completion"></p>
+                        </div>
+                        <button class="secondary-option" id="toggle-playlist"><span><i class="fas fa-folder-plus"></i></span></button>
+                        <button class="secondary-option" id="toggle-info"><span><i class="fas fa-info-circle"></i></span></button>
+                    </div>
+                </div>
+                <div id="preview">
+                    <video></video>
+                </div>
+            </div>
+            <div class="media-navigation">
+                <div class="latest-movies">
+                    <div class="media-list"><h4>Recently Added</h4></div>
+                </div>
+                <div class="continue-watching">
+                    <div class="media-list"><h4>Continue Watching</h4></div>
+                </div>
+                <div class="media-grid">
+                </div>
+            </div>
+        </section>
+        <section id="series">
+            <div class="details">
+                <div class="info">
+                    <div class="title"></div>
+                    <ul>
+                        <li class="wk-rating"></li>
+                        <li><span class="imdb_rating"></span> <i class="fas fa-star"></i></li>
+                        <li><span class="audience"></span></li>
+                        <li class="sesion-count"></li>
+                        <li><i class="fas fa-calendar"></i> <span class="release-date"></span></li>
+                    </ul>
+                    <ul id="tags"></ul>
+                    <div class="discription"></div> 
+                    <div class="awards toggle-info"><i class="fas fa-award"></i> <span></span></div>
+                    <div id="secondary-controls">
+                        <div class="mediaPlay">
+                            <button class="secondary-option" id="play-media"><span><i class="fas fa-play"></i></span> Episode 1</button>
+                            <p class="media-completion"></p>
+                        </div>
+                        <button class="secondary-option" id="toggle-info"><span><i class="fas fa-info-circle"></i></span></button>
+                    </div>
+                </div>
+                <div id="preview">
+                    <video></video>
+                </div>
+            </div>
+            <div class="media-navigation">
+                <div class="latest-series">
+                    <div class="media-list"><h4>Recently Added</h4></div>
+                </div>
+            </div>
+        </section>
+        <section id="library">
+        </section>
+        <section id="settings">
+        </section>
+    </main>
+    <!-- Optional JavaScript --> 
+    <script>
+        //DEBUG OUTPUT (REMOVE ON RELEASE)
+        window.onerror = function (msg, url, lineNo, columnNo, error) {
+            var errorstr = "<b>Message :</b>" + msg + 
+                "<br> <b>URL: </b>" + url + 
+                "<br> <b>on Line: </b>" + lineNo + 
+                "<br></br> <b>Stack Trace: </b>"+ error.stack;
+            document.getElementById("debug-output").innerHTML= errorstr;
+            document.getElementById("debug-output").style.display = "unset";
+            return false;
+        }
+    </script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/icon.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/media-player.js"></script>
+    <script src="js/app.js"></script>
+    <script src="/js/modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+var icon_folder_plus = '<span><i class="fas fa-folder-plus"></i></span>';
+var icon_folder_minus = '<span><i class="fas fa-folder-minus"></i></span>';
+var icon_check = '<span><i class="fas fa-check"></i></span>';
+var icon_exclamation_triangle = '<span><i class="fas fa-exclamation-triangle"></i></span>';
+var icon_times_circle = '<span><i class="fas fa-times-circle"></i></span>';
+var icon_hand_spock = '<span><i class="fas fa-hand-spock"></i></span>';
+var icon_angry = '<span><i class="fas fa-angry"></i></span>';
+var icon_smile = '<span><i class="fas fa-smile"></i></span>';
+var icon_grin_beam = '<span><i class="fas fa-grin-beam"></i></span>';
+var icon_film = '<span><i class="fas fa-film"></i></span>';
+var icon_tv = '<span><i class="fas fa-tv"></i></span>';
+var icon_info_circle = '<span><i class="fas fa-info-circle"></i></span>';
+var icon_history = '<span><i class="fas fa-history"></i></span>';
+var icon_trash = '<span><i class="fas fa-trash"></i></span>';
+var icon_play = '<span><i class="fas fa-play"></i></span>';
+var icon_pause = '<span><i class="fas fa-pause"></i></span>';

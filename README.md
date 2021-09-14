@@ -1,9 +1,20 @@
-# Iris Media Streamer
+# Introduction 
+TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
 
-Localized Media Streaming Service for streaming media content on a local network.
+# Getting Started
+TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
+1.	Installation process
+2.	Software dependencies
+3.	Latest releases
+4.	API references
 
-# Server API
-The server impliments an API that the client service communicates with through API calls via JavaScript, the API interacts with the Database that houses all streamable meida on the network. The API is implimented via PHP, using Xampp Apache, MySQL Web Server running on a desktop exposed on the local network, that houses all the media as a NAS (Network Attached Storage).
+# Build and Test
+TODO: Describe and show how to build your code and run the tests. 
 
-# Iris
-Named after the greek godess of rainbow and colors, is the Application that enables accessing of the exposed media on the network, for now the interaction is web based, so any device with a decient web browser will be able to access the Iris Service. 
+# Contribute
+TODO: Explain how other users and developers can contribute to make your code better. 
+
+If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
+- [ASP.NET Core](https://github.com/aspnet/Home)
+- [Visual Studio Code](https://github.com/Microsoft/vscode)
+- [Chakra Core](https://github.com/Microsoft/ChakraCore)

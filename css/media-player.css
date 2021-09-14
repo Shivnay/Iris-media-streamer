@@ -1,0 +1,136 @@
+/*
+    Media Player
+*/
+#media-player {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 6;
+    background: black;
+    transition: 0.2s ease-out;    
+}
+.media-player-show{
+    opacity: 1;
+}
+.media-player-hide{
+    opacity: 0;
+}
+#media-player #media-prompt {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
+#media-prompt p {
+    margin: auto;
+    position: relative;
+    top: 45%;
+    width: 10%;
+    display: flex;
+    font-size: 25pt;
+    color: white;
+}
+.loading {
+    opacity: 0;
+}
+#media-player video {
+    height: inherit;
+    width: inherit;
+}
+#media-player #controls {
+    width: 100%;
+    height: 65%;
+    position: absolute;
+    top: 75%;
+    background: rgb(0,0,0);
+    background: -moz-linear-gradient(0deg, rgba(0,0,0,0.6082808123249299) 61%, rgba(0,0,0,0.4822303921568627) 87%, rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(0,0,0,0.6082808123249299) 61%, rgba(0,0,0,0.4822303921568627) 87%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(0deg, rgba(0,0,0,0.6082808123249299) 61%, rgba(0,0,0,0.4822303921568627) 87%, rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);transition: 0.15s ease-out;
+}
+.controls-hide{
+    opacity: 0;
+}
+.controls-show{
+    opacity: 1;
+}
+#controls #playback {
+    height: 30%;
+    width: 95%;
+    margin: auto;
+}
+#controls #playlist {
+    height: 60%;
+}
+#controls #playlist .media-list{
+    background: transparent;
+}
+#controls #playlist .media-list h4 {
+    background: #c93939;
+    margin-top: 13px;
+    margin-right: 10px;
+    height: 220px;
+    letter-spacing: 3px;
+}
+#controls #seek {
+    margin: auto;
+    width: 90%;
+    height: 50%;
+    color: white;
+}
+#media-details {
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+#media-details #title {
+    height: 100%;
+    font-size: 15pt;
+}
+#seek #bar {
+    border-radius: 3px;
+    height: 3%;
+    background: rgba(224, 224, 224, 0.815);
+}
+#bar #completionBar {
+    border-radius: inherit;
+    width: 50%;
+    height: 100%;
+    transition: 0.15s ease-out;
+}
+#seek #runtime {
+    width: 100%;
+    height: 45%;
+    display: flex;
+}
+#runtime #currentRuntime {
+    font-size: 15pt;
+    width: 10%;
+    text-align: center;
+    margin-top: auto;
+}
+#runtime #totalRuntime {
+    font-size: 15pt;
+    width: 10%;
+    margin-left: 80%;
+    text-align: center;
+    margin-top: auto;
+}
+#controls #navigation {
+    height: 50%;
+    display: flex;
+    color: white;
+}
+#navigation #back {
+    width: 10%; 
+}
+#navigation button {       
+    width: 5%;     
+    height: 60%;
+    font-size: 15pt;
+    border: none;
+    border-radius: 5px;
+    margin: auto;
+    color: inherit;
+    background: transparent;
+    transition: 0.15s ease-out;
+}
